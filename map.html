@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Abandoned on the map</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <script src="https://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU" type="text/javascript"></script>
+  <script type="text/javascript">
+    ymaps.ready(init);
+    var myMap, 
+    myPlacemark;
+
+    function init(){ 
+      myMap = new ymaps.Map ("map", {
+        center: [55.76, 37.64],
+        zoom: 7
+      }); 
+      
+      myPlacemark = new ymaps.Placemark([55.76, 37.64], {
+        hintContent: 'Москва!',
+        balloonContent: 'Столица России'
+      });
+      
+      myMap.geoObjects.add(myPlacemark);
+    }
+  </script>
+  <link rel="stylesheet" href="map.css">
+  <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+</head>
+<header>
+  <nav class="navbar navbar-default">
+    <a class="navbar" href="list.html">List</a>
+    <a class="navbar" href="map.html">Map</a>
+    <a class="logo" href="Home.html">-ABANDONED-</a>
+    <a class="navbar" href="About.html">About</a>
+    <a class="navbar" href="Contacts.html">Contacts</a>
+  </nav>
+
+      <!-- <div class="header">ABANDONED
+    </div> -->
+  </header>
+  
+  <body>
+    <div class="body" style="font-size: 20px;
+    font-family: futura-pt,Helvetica,Arial,sans-serif; 
+    width: 100%;
+    background: linear-gradient(white, #bbbec1);
+    "></div>
+    <div id="map" style="width: 100%; height: 700px"></div>
+  </body>
+  <footer>
+   
+    <div id="footer" style="position: relative;
+    text-align: center;width: 100%;
+    padding: 3px 5px 3px 5px;">  © 2016</div>
+    
+  </footer>
+  </html>
